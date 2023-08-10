@@ -7,8 +7,10 @@
     <title>Responsive Personal Portfolio Website</title>
     <!-- ICONSCOUT CDN -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!-- GOOGLE FONTS(POPPINS) -->
+    <!-- GOOGLE FONTS(POPPINS & OUTFIT) -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;700;800;900&family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <!------ ANIMATE ON SCROLL------>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -39,10 +41,10 @@
 
     <header>
         <div class="container header__container">
-            <article class="header__image">
+            <article class="header__image" data-aos="fade-up" data-aos-delay="600">
                 <div><img src="./assets/header.jpg" alt="Header Image"></div>
             </article>
-            <article class="header__content">
+            <article class="header__content" data-aos="fade-in">
                 <h4>Hi, I'm <span>Vansh Goel</span>. And I'll</h4>
                 <h1>Get your business</br>online the right way</h1>
                 <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti id temporibus pariatur, cum doloribus eum! Natus culpa reprehenderit porro temporibus eos exercitationem perferendis ut obcaecati aut pariatur. Vitae, ratione tempora.</p>
@@ -53,7 +55,7 @@
             </article>
             <ul class="header__socials">
                 <li><a href="https://twitter.com/vanshgoel" target="_blank"><i class="uil uil-twitter-alt"></i></a></li>
-                <li><a href="https://github.com/vanshgoel" target="_blank"><i class="uil uil-github-alt"></i></a></li>
+                <li><a href="https://github.com/vansh241" target="_blank"><i class="uil uil-github-alt"></i></a></li>
                 <li><a href="https://linkedin.com/vanshgoel" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
             </ul>
         </div>
@@ -68,7 +70,7 @@
             <div class="about__image">
                 <img src="./assets/about.jpg" alt="About Image">
             </div>
-            <div class="about__details">
+            <div class="about__details" data-aos="fade-in" data-aos-delay="300">
                 <h1>About me</h1>
                 <div class="about__cards">
                     <article class="about__card">
@@ -130,7 +132,7 @@
                         </div>
                     </li>
                 </ul>
-                <article class="services__right">
+                <article class="services__right" data-aos="fade-in" data-aos-delay="200">
                     <!-- <h3>Frontend Development</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam repellat, cum blanditiis ducimus beatae voluptatum illum et pariatur consequuntur consequatur aut impedit! Similique atque dolore a animi doloremque accusamus aspernatur.
@@ -150,22 +152,77 @@
 
 
 
-        <sections class="projects" id="projects">
+        <section class="projects" id="projects">
             <h1>Recent Projects</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi est molestiae, corrupti at veritatis iure.</p>
             <ul class="projects__categories">
-                <li>All</li>
-                <li>Frontend</li>
-                <li>Backend</li>
-                <li>Data Science</li>
+                <li class="active" data-filter="*">All</li>
+                <li data-filter=".frontend">Frontend</li>
+                <li data-filter=".backend">Backend</li>
+                <li data-filter=".datascience">Data Science</li>
             </ul>
 
-            <div class="container projects__container">
-                <article class="project">
+            <div class="container projects__container" data-aos="fade-in">
+                <article class="project mix datascience" data-order="1">
                     <div class="project__image">
-                        <img src="./assets/project1.jpg" alt="Project Image One">
+                        <img src="./assets/project1.jpg" alt="Project One">
                     </div>
-                    <h3>Project One Title (Fullstack) </h3>
+                    <h3>Project One Title (Data Science) </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
+                    <div class="project__cta">
+                        <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
+                        <a href="https://github.com" class="btn sm" target="_blank">Github</a>
+                    </div>
+                </article>
+                <article class="project mix frontend" data-order="2">
+                    <div class="project__image">
+                        <img src="./assets/project2.jpg" alt="Project Two">
+                    </div>
+                    <h3>Project Two Title (Frontend) </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
+                    <div class="project__cta">
+                        <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
+                        <a href="https://github.com" class="btn sm" target="_blank">Github</a>
+                    </div>
+                </article>
+                <article class="project mix datascience" data-order="3">
+                    <div class="project__image">
+                        <img src="./assets/project3.jpg" alt="Project Three">
+                    </div>
+                    <h3>Project Three Title (Data Science) </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
+                    <div class="project__cta">
+                        <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
+                        <a href="https://github.com" class="btn sm" target="_blank">Github</a>
+                    </div>
+                </article>
+                <article class="project mix frontend" data-order="4">
+                    <div class="project__image">
+                        <img src="./assets/project4.jpg" alt="Project Four">
+                    </div>
+                    <h3>Project Four Title (Frontend) </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
+                    <div class="project__cta">
+                        <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
+                        <a href="https://github.com" class="btn sm" target="_blank">Github</a>
+                    </div>
+                </article>
+                <article class="project mix frontend" data-order="5">
+                    <div class="project__image">
+                        <img src="./assets/project5.jpg" alt="Project Five">
+                    </div>
+                    <h3>Project Five Title (Frontend) </h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
+                    <div class="project__cta">
+                        <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
+                        <a href="https://github.com" class="btn sm" target="_blank">Github</a>
+                    </div>
+                </article>
+                <article class="project mix backend" data-order="6">
+                    <div class="project__image">
+                        <img src="./assets/project6.jpg" alt="Project Six">
+                    </div>
+                    <h3>Project Six Title (Backend) </h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et molestias, delectus neque dolorum, numquam ipsum impedit rerum tempora voluptate maiores ullam corporis, reiciendis ab cumque. Qui quam quas unde numquam.</p>
                     <div class="project__cta">
                         <a href="https://linkedin.com" class="btn sm primary" target="_blank">linkedin</a>
@@ -173,12 +230,73 @@
                     </div>
                 </article>
             </div>
-        </sections>
+        </section>
+
+        <!-- --------END OF PROJECTS SECTION--------- -->
+
+
+
+
+
+        <section class="contact" id="contact">
+            <div class="container contact__container">
+                <ul class="contact__list">
+                    <li data-aos="fade-in"><a href="mailto:vanshgoel241@gmail.com" class="contact__list-item" target="_blank">
+                        <i class="uil uil-envelope"></i>
+                    </a></li>
+
+                    <li data-aos="fade-in" data-aos-delay="150"><a href="https://wa.me/+9711309623" class="contact__list-item" target="_blank">
+                        <i class="uil uil-whatsapp"></i>
+                    </a></li>
+
+                    <li data-aos="fade-in" data-aos-delay="300"><a href="tel:+9711309623" class="contact__list-item" target="_blank">
+                        <i class="uil uil-phone"></i>
+                    </a></li>
+                </ul>
+
+                <form action="https://formsubmit.co/vanshgoel241@gmail.com" method="POST" class="contact__form" data-aos="fade-up" data-aos-delay="600">
+                    <input type="text" name="Name" placeholder="Full Name">
+                    <input type="email" name="Email" placeholder="Email Address">
+                    <textarea rows="7" name="Message" placeholder="Message"></textarea>
+                    <button type="submit" class="btn">Send</button>
+                </form>
+            </div>
+        </section>
+
+
+
+
+
+
+        <footer>
+            <div class="container footer__container">
+                <ul class="footer__menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <ul class="footer__socials">
+                    <li><a href="https://twitter.com/vanshgoel" target="_blank"><i class="uil uil-twitter-alt"></i></a></li>
+                <li><a href="https://github.com/vansh241" target="_blank"><i class="uil uil-github-alt"></i></a></li>
+                <li><a href="https://linkedin.com/vanshgoel" target="_blank"><i class="uil uil-linkedin-alt"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer__copyright">
+                <small>&copy; All Rights Reserved.</small>
+            </div>
+        </footer>
 
 
       
 
 
+        <script src="./mixitup/dist/mixitup.min.js"></script>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({duration: 1500, offset: 80});
+        </script>  
         <script src="./data.js"></script>
         <script src="./index.js"></script>
 
