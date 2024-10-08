@@ -502,6 +502,17 @@ header {
     margin: 0.5rem 0 1.5rem;
 }
 
+.project h1{
+    color: #333;
+}
+
+.project h4{
+    margin-top: 8px;
+    margin-bottom: 14px;
+    /* font-style: italic; */
+    color: #555;
+}
+
 .project__cta {
     display: flex;
     gap: 1rem;
